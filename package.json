@@ -4,17 +4,29 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode=development"
+    "start": "webpack serve --mode=development",
+    "lint:scripts": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:scripts:changed": "ls-changed '**/*.{js,jsx,ts,tsx}' -- eslint"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.7.1",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-webpack-plugin": "^3.1.1",
     "react-hot-loader": "^4.13.0",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
@@ -25,6 +37,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
+    "@types/react-dom": "^17.0.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
