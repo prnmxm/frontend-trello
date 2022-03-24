@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Board } from '../pages/board';
+import { Board } from '@pages/board';
 
 function App() {
   return <Board />;

@@ -6,7 +6,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|tsx|ts)$/,
+        test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'ts-loader'],
       },
@@ -32,7 +32,12 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@pages': path.join(__dirname, 'src/pages/'),
+      '@app': path.resolve(__dirname, 'src/app/'),
+      '@shared': path.resolve(__dirname, 'src/shared/'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

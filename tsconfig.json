@@ -1,12 +1,34 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
-    "allowJs": true,
+    "allowJs": false,
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
-    }
+    "target": "esnext",
+    "jsx": "preserve",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "useUnknownInCatchVariables": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "paths": {
+      "@pages/*": ["src/pages/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@app/*": ["src/app/*"]
+    },
+    "lib": ["dom", "esnext"],
+  },
+  "include": ["**/*.ts", "**/*.tsx","**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules", "scripts"]
 }
